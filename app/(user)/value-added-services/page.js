@@ -1,6 +1,6 @@
 "use client";
 
-import { Display1, P, H3, Subtitle } from "@/components/Typography";
+import { Display1, P, Subtitle } from "@/components/Typography";
 import Button from "@/components/Button/Button";
 import SingleServiceSection from "@/components/Services/SingleServiceSection";
 import ContactUsBanner from "@/components/ContactUsBanner";
@@ -8,13 +8,12 @@ import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Fees from "@/components/Services/Fees";
 
-const ServicesPage = () => {
+const ValueAddedService = () => {
   return (
     <div>
       <div className="py-[150px]">
-        <Display1 className={"text-yellow"}>Services</Display1>
+        <Display1 className={"text-yellow"}>Value Added Services</Display1>
         <Subtitle className="text-xl font-light mt-6 mb-9 tracking-[1.2px]">
           Empowering investors to achieve greater returns through professional
           brokerage services
@@ -88,10 +87,9 @@ const ServicesPage = () => {
           </AccordionDetails>
         </Accordion>
       </SingleServiceSection>
-      <Fees />
       <ContactUsBanner />
     </div>
   );
 };
 
-export default ServicesPage;
+export default ValueAddedService;
