@@ -10,13 +10,14 @@ const PriceInfoRow = ({ className, title, priceFixed, desc }) => {
     >
       <H3>{title}</H3>
       {priceFixed ? (
-        <A className={"text-3xl font-medium"} href="/contact">
+        <A className="text-[30px] font-medium" href="/contact">
           Contact Us
         </A>
       ) : (
-        <P className={"text-3xl font-medium"}>
-          <span className="text-yellow">BDT</span> 500{" "}
-          <span className="text-sm">(one time)</span>
+        <P className={"font-medium"}>
+          <span className="text-yellow text-3xl">BDT </span>
+          <span className="text-3xl">500</span>
+          <span className="text-sm"> (one time)</span>
         </P>
       )}
     </div>

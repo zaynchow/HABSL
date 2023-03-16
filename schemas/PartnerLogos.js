@@ -1,7 +1,7 @@
 export default {
-  name: "partner-logos",
+  name: "partners",
   type: "document",
-  title: "Partner Logos",
+  title: "Partners",
   fields: [
     {
       name: "name",
