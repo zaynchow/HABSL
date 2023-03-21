@@ -9,7 +9,7 @@ import SingleTestimonialSlider from "./SingleTestimonialSlider";
 import SwiperButtonNext from "./SwiperButtonNext";
 import SwiperButtonPrev from "./SwiperButtonPrev";
 
-const Testimonial = () => {
+const Testimonial = ({ data }) => {
   const [progressBar, setProgressBar] = useState(0);
   return (
     <SectionContainer>
@@ -31,20 +31,17 @@ const Testimonial = () => {
         centeredSlides={true}
         onSlideChange={(swiperCore) => {
           const { realIndex } = swiperCore;
-          console.log(swiperCore);
-          setProgressBar((realIndex + 1) / 8);
+          setProgressBar((realIndex + 1) / data.length);
         }}
       >
-        {[...Array(8)].map((data, i) => (
+        {data.map((obj, idx) => (
           <SwiperSlide>
             <SingleTestimonialSlider
-              name="Zayn Chowdhury"
-              designation="UI Dev, Jostle"
+              name={obj.name}
+              designation={obj.designation}
+              img={obj.img}
             >
-              HABSL provides a reliable and professional service. I receive
-              quick responses and honest intent that helps us to direct our
-              clientele in quick easy steps. Having HABSL as our partner really
-              gives us seamless trading operation.
+              {obj.desc}
             </SingleTestimonialSlider>
           </SwiperSlide>
         ))}

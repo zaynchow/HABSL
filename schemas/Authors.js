@@ -1,18 +1,18 @@
 export default {
-  name: "partners",
+  name: "authors",
   type: "document",
-  title: "Partners",
+  title: "Authors",
   fields: [
     {
       name: "name",
       type: "string",
-      title: "Company Name",
+      title: "Author Name",
       validation: (rule) => rule.required(),
     },
     {
       name: "image",
       type: "image",
-      title: "Logo Image",
+      title: "Author Image",
       validation: (rule) => rule.required(),
     },
   ],

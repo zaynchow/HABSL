@@ -1,7 +1,6 @@
 import React from "react";
 import Display1 from "../Typography/Display1";
 import Button from "../Button/Button";
-import Image from "next/image";
 import { Subtitle } from "../Typography";
 
 const Hero = () => {
@@ -50,3 +49,4 @@ const Hero = () => {
 };
 
 export default Hero;
+

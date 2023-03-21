@@ -3,7 +3,7 @@ import PriceInfoRow from "../Utils/PriceInfoRow";
 import SectionContainer from "../Utils/SectionContainer";
 import { H2, Subtitle } from "../Typography";
 
-const Fees = () => {
+const Fees = ({ data }) => {
   return (
     <SectionContainer>
       <H2>Fees and Charges</H2>
@@ -12,10 +12,17 @@ const Fees = () => {
         Securities Brokerage
       </Subtitle>
       <div className="mt-16">
-        <PriceInfoRow title={"BO Account Opening"} />
-        <PriceInfoRow title={"Annual Account Maintenance"} />
-        <PriceInfoRow title={" Account Closing Fee"} />
-        <PriceInfoRow title={"Other Services"} priceFixed />
+        {data.map((obj, indx) =>
+          obj.price ? (
+            <PriceInfoRow
+              title={obj.service_name}
+              price={obj.price}
+              period={obj.period}
+            />
+          ) : (
+            <PriceInfoRow title={obj.service_name} priceNotConfirmed />
+          )
+        )}
       </div>
     </SectionContainer>
   );

@@ -25,7 +25,7 @@ export default {
         ],
         layout: "radio",
       },
-      validation: (rule) => rule.required(),
+      validation: (rule) => rule.valueOfField("price") > 0 && rule.required(),
       hidden: ({ parent }) => !parent?.price,
     },
   ],
