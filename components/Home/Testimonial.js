@@ -34,8 +34,8 @@ const Testimonial = ({ data }) => {
           setProgressBar((realIndex + 1) / data.length);
         }}
       >
-        {data.map((obj, idx) => (
-          <SwiperSlide>
+        {data.map((obj, index) => (
+          <SwiperSlide key={index}>
             <SingleTestimonialSlider
               name={obj.name}
               designation={obj.designation}

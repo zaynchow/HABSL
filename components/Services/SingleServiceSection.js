@@ -27,6 +27,7 @@ const SingleServiceSection = ({
         width={500}
         height={400}
         className="max-w-[50%]"
+        alt="Service Image"
       />
       <div className={`max-w-[50%] ${reverse ? "pr-10" : "pl-10"}`}>
         <H3 className="font-semibold">{title}</H3>

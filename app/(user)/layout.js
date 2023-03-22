@@ -10,7 +10,7 @@ import { Plus_Jakarta_Sans, Lora } from "next/font/google";
 import Footer from "@/components/Footer";
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["200", "300", "400", "500"],
+  weight: ["200", "300", "400", "500", "600"],
   variable: "--font-jakarta",
 });
 const lora = Lora({

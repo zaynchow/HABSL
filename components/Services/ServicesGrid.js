@@ -12,6 +12,7 @@ const ServicesGrid = ({ data }) => {
           includeAccordions={obj.include_accordions}
           accordions={obj.accordions}
           image={obj.service_img}
+          key={index}
         />
       ))}
       {console.log(data)}

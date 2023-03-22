@@ -14,6 +14,7 @@ const SingleTestimonialSlider = ({ name, children, designation, img }) => {
             width="68"
             height="68"
             className="rounded-[50%] h-[68px]"
+            alt="Testimonial Image"
           />
           <P>
             {name}

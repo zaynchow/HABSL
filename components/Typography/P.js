@@ -4,7 +4,7 @@ const P = ({ className, children, onClick }) => {
     <p
       className={`font-jakarta text-[16px] font-regular leading-[24px] inline-block ${className}`}
       onClick={onClick}
-      style={{ "word-spacing": "3px" }}
+      style={{ wordSpacing: "3px" }}
     >
       {children}
     </p>

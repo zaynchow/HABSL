@@ -12,15 +12,20 @@ const Fees = ({ data }) => {
         Securities Brokerage
       </Subtitle>
       <div className="mt-16">
-        {data.map((obj, indx) =>
+        {data.map((obj, index) =>
           obj.price ? (
             <PriceInfoRow
               title={obj.service_name}
               price={obj.price}
               period={obj.period}
+              key={index}
             />
           ) : (
-            <PriceInfoRow title={obj.service_name} priceNotConfirmed />
+            <PriceInfoRow
+              title={obj.service_name}
+              priceNotConfirmed
+              key={index}
+            />
           )
         )}
       </div>

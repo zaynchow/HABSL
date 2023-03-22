@@ -17,7 +17,7 @@ const Services = ({ data }) => {
 
       <div className="flex w-full justify-between text-center mt-9">
         {data.map((obj, index) => (
-          <div className="flex flex-col w-full">
+          <div className="flex flex-col w-full" key={index}>
             <P
               className={"font-regular text-white cursor-pointer"}
               onClick={() => {
@@ -37,6 +37,7 @@ const Services = ({ data }) => {
                 ? "text-yellow"
                 : "text-white"
             } w-1/4 border-solid border-2 transition`}
+            key={index}
           />
         ))}
       </div>
@@ -55,6 +56,7 @@ const Services = ({ data }) => {
             className="!relative"
             src={urlFor(option.service_img).url()}
             fill
+            alt="Service Image"
           />
         </div>
       </div>

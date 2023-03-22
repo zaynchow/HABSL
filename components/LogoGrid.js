@@ -13,7 +13,7 @@ const LogoGrid = ({ data }) => {
           <Image
             className="saturate-0 hover:saturate-100 h-fit max-h-[100px]"
             src={urlFor(obj.image).url()}
-            alt="sdf"
+            alt="partner logo"
             width={250}
             height={300}
             key={i}
@@ -25,7 +25,7 @@ const LogoGrid = ({ data }) => {
           <Image
             className="saturate-0 hover:saturate-100 h-fit max-h-[100px]"
             src={urlFor(obj.image).url()}
-            alt="sdf"
+            alt="partner logo"
             width={250}
             height={300}
             key={i}

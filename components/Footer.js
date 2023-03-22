@@ -10,14 +10,21 @@ const Footer = () => {
         <div>
           <div className="flex pb-20 justify-between">
             <div className="max-w-[240px]">
-              <Image src="/logos/logo.svg" width="120" height="120" />
+              <Image
+                src="/logos/logo.svg"
+                width="120"
+                height="120"
+                alt="HABSL Logo"
+              />
               <P className="text-[14px] text-white  mt-4">
                 Haji Ahmad Brothers Securities Limited is one of the found
                 companies in Bangladesh.
               </P>
             </div>
             <div className="max-w-[280px]">
-              <P className="text-[20px] text-white mb-4 font-semibold ">Office</P>
+              <P className="text-[20px] text-white mb-4 font-semibold ">
+                Office
+              </P>
               <br />
               <P className="text-white ">
                 Uday Tower (6th floor), 57-57/A, Gulshan Avenue-1, Dhaka-1212
@@ -36,7 +43,9 @@ const Footer = () => {
               <br />
             </div>
             <div>
-              <P className=" text-[20px] text-white mb-4 font-semibold ">Links</P>
+              <P className=" text-[20px] text-white mb-4 font-semibold ">
+                Links
+              </P>
               <br />
               <A className="text-white" href="/">
                 Home
@@ -60,7 +69,9 @@ const Footer = () => {
               <br />
             </div>
             <div>
-            <P className=" text-[20px] text-white mb-4 font-semibold ">Socials</P>
+              <P className=" text-[20px] text-white mb-4 font-semibold ">
+                Socials
+              </P>
             </div>
           </div>
           <div className="flex flex-col">
@@ -72,7 +83,10 @@ const Footer = () => {
               © Copyright HABS LTD 2023. All Rights Reserved.
             </P>
             <P className="text-[14px] text-white">
-              Designed & Developed by <a className="underline" href="https://zaynchowdhury.com">Zayn Chowdhury</a> 
+              Designed & Developed by{" "}
+              <a className="underline" href="https://zaynchowdhury.com">
+                Zayn Chowdhury
+              </a>
             </P>
           </div>
         </div>

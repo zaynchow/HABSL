@@ -12,18 +12,21 @@ const ValueAddedServices = ({ data }) => {
         brokerage services
       </Subtitle>
       <div className="mt-16">
-        {data.map((obj, idx) => {
-          if (idx == data.length - 1) {
+        {data.map((obj, index) => {
+          if (index == data.length - 1) {
             return (
               <InfoRow
                 title={obj.service_name}
                 button
                 link="/"
                 className="border-b-2 border-solid border-black"
+                key={index}
               />
             );
           }
-          return <InfoRow title={obj.service_name} button link="/" />;
+          return (
+            <InfoRow title={obj.service_name} button link="/" key={index} />
+          );
         })}
       </div>
     </SectionContainer>

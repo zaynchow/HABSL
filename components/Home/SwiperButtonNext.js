@@ -18,6 +18,7 @@ const SwiperButtonNext = ({ progress }) => {
             src="/icons/arrow-right.svg"
             width={20}
             height={20}
+            alt="Right Arrow"
           />
         </button>
         <button
@@ -29,12 +30,16 @@ const SwiperButtonNext = ({ progress }) => {
             src="/icons/arrow-right.svg"
             width={20}
             height={20}
+            alt="Left Arrow"
           />
         </button>
       </div>
-     
+
       <div className="bg-black relative h-1 w-[300px]">
-        <div className='bg-yellow h-12 transition-all' style={{width:`${300 * progress}px`}}>
+        <div
+          className="bg-yellow h-12 transition-all"
+          style={{ width: `${300 * progress}px` }}
+        >
           70%
         </div>
       </div>

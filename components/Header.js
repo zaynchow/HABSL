@@ -8,7 +8,7 @@ const Header = () => {
   return (
     <header className="w-full xl:w-[1186px] justify-between flex mx-auto mt-3 items-center">
       <div className="flex items-center">
-        <Image src="/logos/logo.svg" width="80" height="80" />
+        <Image src="/logos/logo.svg" width="80" height="80" alt="HABSL Logo" />
         <div className="">
           <ul className="flex items-center">
             <li className="pl-8 ">
