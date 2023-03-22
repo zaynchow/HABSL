@@ -15,6 +15,7 @@ const SingleServiceSection = ({
   title,
   desc,
   includeAccordions,
+  accordions,
 }) => {
   return (
     <SectionContainer
@@ -49,24 +50,25 @@ const SingleServiceSection = ({
           />
         </div>
 
-        {includeAccordions && (
-          <Accordion>
-            <AccordionSummary
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              expandIcon={<ExpandMoreIcon />}
+        {includeAccordions &&
+          accordions.map((obj, index) => (
+            <Accordion
+              className="!shadow-none  !border-b-2 !border-black !border-solid !m-0 before:!h-0 "
+              key={index}
             >
-              <P>Accordion 1</P>
-            </AccordionSummary>
-            <AccordionDetails>
-              <P>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </P>
-            </AccordionDetails>
-          </Accordion>
-        )}
+              <AccordionSummary
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+                expandIcon={<ExpandMoreIcon />}
+                className="!p-0"
+              >
+                <P className="!m-0">{obj.accordion_title}</P>
+              </AccordionSummary>
+              <AccordionDetails>
+                <P>{obj.accordion_desc}</P>
+              </AccordionDetails>
+            </Accordion>
+          ))}
       </div>
     </SectionContainer>
   );

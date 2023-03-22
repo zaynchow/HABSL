@@ -1,6 +1,6 @@
 "use client";
 
-import { Display1, P, H3, Subtitle } from "@/components/Typography";
+import { Display1, Subtitle } from "@/components/Typography";
 import Button from "@/components/Button/Button";
 
 import ContactUsBanner from "@/components/ContactUsBanner";
