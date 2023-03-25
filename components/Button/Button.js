@@ -19,7 +19,15 @@ const Button = ({
       } ${className}`}
       href={link}
     >
-      <P className="inline-block">{children}</P>
+      <P
+        className={`inline-block ${
+          bgColor == "bg-blue" || bgColor == "bg-black"
+            ? "text-white"
+            : "text-black"
+        }`}
+      >
+        {children}
+      </P>
       {arrow && (
         <img
           className="inline-block ml-2 "

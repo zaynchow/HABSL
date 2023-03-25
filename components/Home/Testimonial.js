@@ -6,8 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import "swiper/swiper-bundle.min.css";
 import SingleTestimonialSlider from "./SingleTestimonialSlider";
-import SwiperButtonNext from "./SwiperButtonNext";
-import SwiperButtonPrev from "./SwiperButtonPrev";
+import SwiperButtons from "./SwiperButtons";
 
 const Testimonial = ({ data }) => {
   const [progressBar, setProgressBar] = useState(0);
@@ -46,7 +45,7 @@ const Testimonial = ({ data }) => {
           </SwiperSlide>
         ))}
 
-        <SwiperButtonNext progress={progressBar} />
+        <SwiperButtons progress={progressBar} />
       </Swiper>
     </SectionContainer>
   );

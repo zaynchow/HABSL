@@ -1,16 +1,13 @@
-
 import { useSwiper } from "swiper/react";
 import Image from "next/image";
 
-
-
-const SwiperButtonNext = ({ progress }) => {
+const SwiperButtonNext = ({ progress, className }) => {
   const swiper = useSwiper();
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className={`flex flex-col items-center gap-6 ${className}`}>
       <div className="flex gap-3">
         <button
-          className=" border-solid border-black border-2 rounded-[200px] w-12 h-12 rotate-180 flex justify-center cursor-pointer items-center "
+          className=" border-solid border-black border-2 rounded-[200px] w-12 h-12 rotate-180 flex justify-center cursor-pointer items-center prev"
           onClick={() => swiper.slidePrev()}
         >
           <Image
@@ -18,11 +15,11 @@ const SwiperButtonNext = ({ progress }) => {
             src="/icons/arrow-right.svg"
             width={20}
             height={20}
-            alt="Right Arrow"
+            alt="Prev Arrow"
           />
         </button>
         <button
-          className=" border-solid border-black border-2 rounded-[200px] w-12 h-12 flex justify-center cursor-pointer items-center "
+          className=" border-solid border-black border-2 rounded-[200px] w-12 h-12 flex justify-center cursor-pointer items-center next"
           onClick={() => swiper.slideNext()}
         >
           <Image
@@ -30,7 +27,7 @@ const SwiperButtonNext = ({ progress }) => {
             src="/icons/arrow-right.svg"
             width={20}
             height={20}
-            alt="Left Arrow"
+            alt="Next Arrow"
           />
         </button>
       </div>

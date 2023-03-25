@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: "city",
-      type: "text",
+      type: "string",
       title: "City",
       validation: (rule) => rule.required(),
     },
@@ -20,15 +20,21 @@ export default {
           title: "Single Office Location",
           fields: [
             {
-              name: "phone_num",
+              name: "title",
               type: "string",
-              title: "Phone Number",
+              title: "Title",
               validation: (rule) => rule.required(),
             },
             {
               name: "address",
               type: "string",
               title: "Address",
+              validation: (rule) => rule.required(),
+            },
+            {
+              name: "phone_num",
+              type: "string",
+              title: "Phone Number",
               validation: (rule) => rule.required(),
             },
           ],

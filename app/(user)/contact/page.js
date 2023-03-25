@@ -4,15 +4,16 @@ import { groq } from "next-sanity";
 import { client } from "@/lib/sanity.client";
 import { useState, useEffect } from "react";
 import Locations from "@/components/Contact/Locations";
-const contactQuery = groq`*[_type=="fees"] | order(_createdAt asc)`;
+import ContactForm from "@/components/Contact/ContactForm";
+
+const locationsQuery = groq`*[_type=="locations"] | order(_createdAt asc)`;
 const Contact = () => {
   const [data, setData] = useState(null);
   async function fetchData() {
-    const feesData = await client.fetch(feesQuery);
-    const servicesData = await client.fetch(servicesQuery);
+    const locationsData = await client.fetch(locationsQuery);
+
     const newData = {
-      feesData,
-      servicesData,
+      locationsData,
     };
     setData(newData);
   }
@@ -25,13 +26,16 @@ const Contact = () => {
     return <div>Loading...</div>;
   }
   return (
-    <div className="py-[150px]">
-      <Display1 className={"text-yellow"}>Contact</Display1>
-      <Subtitle className="text-xl font-light mt-6 mb-9 tracking-[1.2px]">
-        Empowering investors to achieve greater returns through professional
-        brokerage services
-      </Subtitle>
-      <Locations />
+    <div>
+      <div className="py-[150px]">
+        <Display1 className={"text-yellow"}>Contact</Display1>
+        <Subtitle className="text-xl font-light mt-6 mb-9 tracking-[1.2px]">
+          Empowering investors to achieve greater returns through professional
+          brokerage services
+        </Subtitle>
+      </div>
+      <Locations data={data.locationsData} />
+      <ContactForm />
     </div>
   );
 };

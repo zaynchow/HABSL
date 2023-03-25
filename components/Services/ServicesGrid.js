@@ -15,7 +15,6 @@ const ServicesGrid = ({ data }) => {
           key={index}
         />
       ))}
-      {console.log(data)}
     </>
   );
 };
