@@ -8,6 +8,7 @@ import LogoGrid from "@/components/LogoGrid";
 import CompanyGoals from "@/components/About/CompanyGoals";
 import { useState, useEffect } from "react";
 import Management from "@/components/Management";
+import ContactUsBanner from "@/components/ContactUsBanner";
 
 const missionQuery = groq`*[_type=="locations"] | order(_createdAt asc)`;
 const peopleQuery = groq`*[_type=="people"] | order(_createdAt asc)`;
@@ -45,6 +46,7 @@ const About = () => {
       <CompanyGoals />
       <LogoGrid data={data.logoData} />
       <Management data={data.peopleData} />
+      <ContactUsBanner />
     </div>
   );
 };
