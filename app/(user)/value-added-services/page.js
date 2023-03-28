@@ -48,7 +48,7 @@ const ValueAddedService = () => {
         </div>
       </div>
       <ServicesGrid data={data.servicesData} />
-      {console.log(data.servicesData)}
+
       <ContactUsBanner />
     </div>
   );

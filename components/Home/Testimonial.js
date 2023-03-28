@@ -31,6 +31,7 @@ const Testimonial = ({ data }) => {
         onSlideChange={(swiperCore) => {
           const { realIndex } = swiperCore;
           setProgressBar((realIndex + 1) / data.length);
+
         }}
       >
         {data.map((obj, index) => (

@@ -9,7 +9,7 @@ const Locations = ({ data }) => {
   return (
     <SectionContainer className="!max-w-[1200px]">
       <H2>Our Locations</H2>
-      {console.log(data[0].offices)}
+
       <Subtitle>
         Empowering investors to achieve greater returns through professional
         brokerage services
@@ -42,7 +42,6 @@ const Locations = ({ data }) => {
       <div className="flex gap-3 justify-center ">
         {option[0].offices.map((singleOffice, index) => (
           <InfoBox title={singleOffice.title}>
-            {console.log(singleOffice.address)}
             <P className="!block">
               <span className="font-semibold">Address: </span>
               {singleOffice.address}

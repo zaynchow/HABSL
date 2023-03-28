@@ -45,7 +45,6 @@ const HomePage = () => {
   return (
     <main>
       <Hero />
-      {console.log(data.testimonialsData)}
       <Counter data={data.counterData} />
       <LogoGrid data={data.logoData} />
       <CommissionBanner />

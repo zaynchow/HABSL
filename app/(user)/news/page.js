@@ -54,10 +54,9 @@ const news = () => {
           title={data.blogData[0].title}
           desc={data.blogData[0].desc}
           img={data.blogData[0].image}
+          summary={data.blogData[0].summary}
+          slug={data.blogData[0].slug}
         />
-        {console.log(data)}
-        <SingleNewsBanner />
-        <SingleNewsBanner />
       </SectionContainer>
     </div>
   );

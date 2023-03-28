@@ -37,7 +37,7 @@ const About = () => {
   }
   return (
     <div>
-      <div className="py-[150px] max-w-[900px] mx-auto">
+      <div className="pt-[150px] max-w-[900px] mx-auto">
         <Display1 className={"text-yellow"}>
           Our goal is to make investment simple for you
         </Display1>
